@@ -1,6 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const Book = require('./book'); // Adjust path as needed
+const Book = require('./book'); 
 
 const app = express();
 const connectToDatabase = async () => {
@@ -15,9 +15,9 @@ const connectToDatabase = async () => {
   }
 };
 
-// 🌐 Routes
-app.get('/', (req, res) => {
-  res.status(200).json({ message: 'Welcome to Book API' });
+
+app.get('/title', (req, res) => {
+  res.status(200).json({ message: 'Welcome to Book ' });
 });
 
 app.post('/books', async (req, res) => {
